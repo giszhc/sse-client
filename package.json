@@ -1,6 +1,6 @@
 {
   "name": "@giszhc/sse-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "main": "dist/sse-client.umd.cjs",
   "module": "dist/sse-client.js",
