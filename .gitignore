@@ -1,0 +1,21 @@
+# Node modules
+node_modules/
+.pnpm-debug.log
+
+# Build output
+dist/
+*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage/

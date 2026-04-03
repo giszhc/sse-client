@@ -1,0 +1,46 @@
+{
+  "name": "@giszhc/sse-client",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/sse-client.umd.cjs",
+  "module": "dist/sse-client.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc --declaration --emitDeclarationOnly --outDir dist ",
+    "build:example": "npm run build && vite build --config vite.example.config.ts",
+    "example:server": "npx tsx example/server.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.4.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.2"
+  },
+  "keywords": [
+    "sse",
+    "Server-Sent Event",
+    "client",
+    "communication"
+  ],
+  "description": "一个 轻量、类型安全 的 Server-Sent Events（SSE）通信客户端库，用于 浏览器端实时数据订阅。",
+  "author": "giszhc",
+  "license": "MIT",
+  "homepage": "https://github.com/giszhc/sse-client#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/giszhc/sse-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/giszhc/sse-client/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+  }
+}
