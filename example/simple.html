@@ -148,6 +148,11 @@ client.on('notification', (payload) => {
 
 client.on('system', (payload) => {
     console.log('收到系统消息:', payload);
+});
+
+// 🔥 一次性监听（仅触发一次）
+client.once('connected', (payload) => {
+    console.log('首次连接:', payload);
 });</code></pre>
     </div>
 

@@ -223,6 +223,46 @@
             border-radius: 3px;
             font-family: 'Courier New', monospace;
         }
+
+        .stats-bar {
+            display: flex;
+            gap: 20px;
+            padding: 15px 30px;
+            background: #fff;
+            border-bottom: 1px solid #e9ecef;
+            justify-content: space-around;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #6c757d;
+            text-transform: uppercase;
+        }
+
+        .stat-value {
+            font-size: 16px;
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .message pre.content {
+            margin: 8px 0 0 0;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 12px;
+            line-height: 1.4;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
     </style>
 </head>
 <body>
@@ -240,6 +280,21 @@
             <div>
                 <span>Namespace: </span>
                 <code>chat</code>
+            </div>
+        </div>
+
+        <div id="stats" class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-label">连接状态:</span>
+                <span class="stat-value">🔴 未连接</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">重连次数:</span>
+                <span class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">收到消息:</span>
+                <span class="stat-value">0 条</span>
             </div>
         </div>
 
@@ -267,6 +322,8 @@
             <p>4. 服务器会每秒发送一条消息，包含不同类型（message、notification、system）</p>
             <p>5. 您可以在控制台或页面上查看接收到的消息</p>
             <p>6. 支持自动重连机制，网络中断后会自动尝试重新连接</p>
+            <p>7. 统计栏实时显示连接状态、重连次数和收到的消息数量</p>
+            <p>8. 示例演示了 <code>once()</code> 方法，首次连接时会显示特殊消息（仅一次）</p>
         </div>
     </div>
 

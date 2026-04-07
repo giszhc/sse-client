@@ -56,6 +56,15 @@ let client: SSEClient | null = null;
         console.log('⚙️ 收到系统消息:', payload);
         addMessage('system', payload);
     });
+
+    // 🔥 使用 once 监听一次性事件（示例）
+    client.once('connected', (payload) => {
+        console.log('🎯 首次连接成功（仅触发一次）:', payload);
+        addMessage('system', { 
+            type: 'once-demo',
+            message: '这是使用 once() 监听的欢迎消息，只会显示一次' 
+        });
+    });
 };
 
 function updateStatus(status: string, text: string) {
